@@ -1,19 +1,24 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=11816621&assignment_repo_type=AssignmentRepo)
-# Nome do projeto
+# Braintech
 
 Escreva um ou dois parágrafo resumindo o objetivo do seu projeto.
 
 ## Alunos integrantes da equipe
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Ana Sara Nunes Pereira
+*	Gabriel Chaves Mendes
+* Gabriela de Assis dos Reis
+* Henrique Augusto de oliveira marcelino
+* Leonardo Amaral Passos Figueiredo
+*	Paulo Henrique Lopes de Paula
 
 ## Professores responsáveis
 
-* Nome completo do professor 1
-* Nome completo do professor 2
+* Ilo Amy Saldanha Rivero
+* João Carlos Oliveira Caetano
+* Luciana Mara Freitas Diniz
+* Rommel Vieira Carneiro
+ 
 
 ## Instruções de utilização
 
