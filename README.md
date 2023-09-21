@@ -1,6 +1,6 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=11816621&assignment_repo_type=AssignmentRepo)
 # Braintech
-   # Neste trabalho, o problema a ser abordado será, Dificuldades Para Ter Hábitos Saudáveis, este problema é uma pauta muito presente na atualidade, envolvendo um grande público alvo que apresenta ter inúmeras dificuldades para adquirir hábitos saudáveis, Diante dessas dificuldades e após a análise e entrevista com diferentes personas, o grupo tende a desenvolver soluções para atender a diferentes realidades afim de ajudar o cliente a superar essa dificuldade.
+   # Nesse trabalho, o problema a ser abordado será, Dificuldades para ter hábitos saudáveis, este problema é uma pauta muito presente na atualidade, envolvedo um grande público alvo que apresenta dificuldades para adquirir hábitos saudáveis. Diante dessas dificuldades e após a análise e entrevistas com diferentes personas, o grupo tende a desenvolver soluções para atender a diferentes realidades afim de ajudar o cliente a superar suas dificuldades.
 
 ## Alunos integrantes da equipe
 
