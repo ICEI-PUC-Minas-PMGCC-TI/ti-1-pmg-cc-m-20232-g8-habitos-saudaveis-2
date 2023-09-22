@@ -10,6 +10,7 @@
 * Henrique Augusto de oliveira marcelino
 * Leonardo Amaral Passos Figueiredo
 *	Paulo Henrique Lopes de Paula
+*	Lucca Cenisio Martins
 
 ## Professores responsáveis
 
