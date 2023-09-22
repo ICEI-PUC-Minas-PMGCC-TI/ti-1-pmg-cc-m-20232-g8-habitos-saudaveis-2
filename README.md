@@ -5,12 +5,12 @@
 ## Alunos integrantes da equipe
 
 * Ana Sara Nunes Pereira
-*	Gabriel Chaves Mendes
+* Gabriel Chaves Mendes
 * Gabriela de Assis dos Reis
 * Henrique Augusto de oliveira marcelino
 * Leonardo Amaral Passos Figueiredo
-*	Paulo Henrique Lopes de Paula
-*	Lucca Cenisio Martins
+* Lucca Cenisio Martins
+* Paulo Henrique Lopes de Paula
 
 ## Professores responsáveis
 
