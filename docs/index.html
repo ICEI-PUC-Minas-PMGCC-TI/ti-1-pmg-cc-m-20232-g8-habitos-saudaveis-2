@@ -433,13 +433,25 @@
                     id="collapseHistorias"
                   >
                     <p>
-                      Apresente aqui as histórias de usuário que são relevantes
-                      para o projeto de sua solução. As Histórias de Usuário
-                      consistem em uma ferramenta poderosa para a compreensão e
-                      elicitação dos requisitos funcionais e não funcionais da
-                      sua aplicação. Se possível, agrupe as histórias de usuário
-                      por contexto, para facilitar consultas recorrentes à essa
-                      parte do documento.
+                      <span>História 1:</span>
+                      Joao com uma rotina pesada com pouco tempo livre que busca
+                      uma melhora na qualidade de vida, estética e atividades
+                      que se ajustam com sua rotina, para isso ele pede um
+                      aplicativo que possa ajuda-lo otimizando sua rotina
+                      principalmente com opcões de refeições rapidas e
+                      variadas.<br />
+                      <span>História 2:</span>maria uma estudande dedicada com
+                      dificuldade de relacionar sua vida acadêmica e social.
+                      Sempre em busca de explorar coisas novas. Porém se sente
+                      diariamente desestimulada, portando busca encontrar
+                      maneiras de organizar sua rotina para atender seu foco nos
+                      estudos e sua busca por manter uma vida saudável e feliz.
+                      para isso devemos tratá-la como uma estudante com rotina
+                      apertada e que busca manter uma vida leve e estável entre
+                      os estudos e ter uma vida saudável para isso ela precisa
+                      de dicas para otimizar seu tempo com atividades praticas e
+                      saudaveis como alimentação e atividades fisicas simples e
+                      rapidas para praticar em qualquer lugar.
                     </p>
                   </div>
                   <table class="table">
@@ -536,22 +548,76 @@
                       <tr>
                         <th scope="row">RF-001</th>
                         <td>
-                          Permitir que o usuário cadastre tarefas<span
-                            class="exemplo"
-                            >EXEMPLO</span
-                          >
+                          Sistema de Registro, alimentação, exercícios, sono,
+                          gestão de estresse.
                         </td>
                         <td>ALTA</td>
                       </tr>
                       <tr>
                         <th scope="row">RF-002</th>
                         <td>
-                          Emitir um relatório de tarefas no mês<span
-                            class="exemplo"
-                            >EXEMPLO</span
-                          >
+                          Notificações Personalizadas, lembretes de acordo com
+                          sua rotina, objetivos diários, etc.
                         </td>
-                        <td>MÉDIA</td>
+                        <td>Alta</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">RF-003</th>
+                        <td>
+                          Acompanhamento de Metas, o usuário deve poder
+                          estabelecer metas e através delas acompanhar seu
+                          progresso, como graficos ou evolução fotográfica.
+                        </td>
+                        <td>Média/Alta</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">RF-004</th>
+                        <td>
+                          Base de conhecimentos, o sistema deve conter
+                          informa;'oes sobre nutrição, exercícios, sono e
+                          otmização com flexibilização para as rotinas.
+                        </td>
+                        <td>Média</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">RF-005</th>
+                        <td>
+                          Avisios de beber água para ajudar a bater meta de água
+                          engerida no dia.
+                        </td>
+                        <td>Baixa</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">RF-006</th>
+                        <td>
+                          Localização de Restaurante ou Academias proximas a
+                          locais recorrentes, para ajudar com a questão da falta
+                          de tempo
+                        </td>
+                        <td>Alta</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">RF-007</th>
+                        <td>
+                          Feed para incentivo do usuário, que através dele
+                          possam ver pessoas atingindo ou avançando com seus
+                          objetivos e dessa maneira se sintirem confiantes e
+                          determinados a mudarem seus hábitos.
+                        </td>
+                        <td>Média/Alta</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">RF-008</th>
+                        <td>Aba de dicas para usuários iniciantes.</td>
+                        <td>Média/Baixa</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">RF-009</th>
+                        <td>
+                          Criação de receitas saudáveis e alimentos que podem
+                          ser substituidos no dia a dia.
+                        </td>
+                        <td>Alta</td>
                       </tr>
                     </tbody>
                   </table>
@@ -569,18 +635,31 @@
                       <tr>
                         <th scope="row">RNF-001</th>
                         <td>
-                          O sistema deve ser responsivo para rodar em um
-                          dispositivos móvel<span class="exemplo">EXEMPLO</span>
+                          Usabilidade, A interface do sistema deve ser intuitiva
+                          e fácil, para melhor navegabilidade do usuário no site
                         </td>
-                        <td>MÉDIA</td>
+                        <td>Alta</td>
                       </tr>
                       <tr>
                         <th scope="row">RNF-002</th>
                         <td>
-                          Deve processar requisições do usuário em no máximo
-                          3s<span class="exemplo">EXEMPLO</span>
+                          Segurança e Privacidade, o sistema deve garantir a
+                          segurança e a privacidade dos dados do usuário.
                         </td>
-                        <td>BAIXA</td>
+                        <td>Alta</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">RNF-003</th>
+                        <td>Acessibilidade, o sistema deve ter opção mobile</td>
+                        <td>Alta</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">RNF-004</th>
+                        <td>
+                          O sistema deve processar as informações do usuário em
+                          um período curto de tempo
+                        </td>
+                        <td>Média</td>
                       </tr>
                     </tbody>
                   </table>
@@ -714,15 +793,15 @@
                     alt="Prototipo de Interface1"
                   />
                   <p>
-                    <span>Descrição:</span> Página Home do site, com menu categorias, que
-                    apresenta opções de navegação ao usuário, como Localização
-                    de Academia, Localização de Restaurantes, Dicas, entre
-                    outros, para ter uma melhor experiencia trazendo ao usuário
-                    uma melhor visualização do site, na parte esqueda temos um
-                    feed interativo, que proporcionará ao usuário uma
-                    visibilidade na comunidade do site e também servira de
-                    ensentivo, uma vez que ao ver as pessoas mudando seus
-                    hábitos e obtendo resultados e atingindo seus objetivos
+                    <span>Descrição:</span> Página Home do site, com menu
+                    categorias, que apresenta opções de navegação ao usuário,
+                    como Localização de Academia, Localização de Restaurantes,
+                    Dicas, entre outros, para ter uma melhor experiencia
+                    trazendo ao usuário uma melhor visualização do site, na
+                    parte esqueda temos um feed interativo, que proporcionará ao
+                    usuário uma visibilidade na comunidade do site e também
+                    servira de ensentivo, uma vez que ao ver as pessoas mudando
+                    seus hábitos e obtendo resultados e atingindo seus objetivos
                     servirá de ensentivo para que o usuário também siga esse
                     caminho, a direita temos um espaço dedicado as melhores
                     dicas da semana que serão selecionadas pelos usuários pela
@@ -736,16 +815,16 @@
                     alt="Protótipo de Interface2"
                   />
                   <p>
-                    <span>Descrição:</span> Protótipo de site apresentando um menu
-                    "hamburguer" ao lado de uma barra de pesquisa e um botão
-                    para filtra-las. Abaixo na coluna à direita, é encontrado um
-                    Feed Interativo para os usuários postarem e interagirem. Na
-                    coluna do meio é apresentado o progresso do usuário e seus
-                    dados relacionados ao IMC (Índice de Massa Corporal). Na
-                    coluna à esquerda é apresentado logo abaixo da barra de
-                    pesquisa postagens de informações diárias e por fim no canto
-                    superior direito se encontra os botões de "Cadastro" e
-                    "Login" e o de "Perfil do Usuário".
+                    <span>Descrição:</span> Protótipo de site apresentando um
+                    menu "hamburguer" ao lado de uma barra de pesquisa e um
+                    botão para filtra-las. Abaixo na coluna à direita, é
+                    encontrado um Feed Interativo para os usuários postarem e
+                    interagirem. Na coluna do meio é apresentado o progresso do
+                    usuário e seus dados relacionados ao IMC (Índice de Massa
+                    Corporal). Na coluna à esquerda é apresentado logo abaixo da
+                    barra de pesquisa postagens de informações diárias e por fim
+                    no canto superior direito se encontra os botões de
+                    "Cadastro" e "Login" e o de "Perfil do Usuário".
                   </p>
                 </section>
               </section>
