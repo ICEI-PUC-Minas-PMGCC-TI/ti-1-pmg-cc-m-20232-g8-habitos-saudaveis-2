@@ -1,0 +1,61 @@
+{
+    "fichasDeTreino": [
+        {
+            "id": 1,
+            "titulo": "Ficha A",
+            "tipo": "Superior",
+            "alongamento": {
+                "descricao": "Assista ao vídeo abaixo e siga as orientações de alongamento.",
+                "videoURL": "https://www.youtube.com/embed/jwP0eQQ3IwU?si=AH5yjLSzWBZSDSRk"
+            },
+            "exercicios": [
+                {
+                    "nome": "Flexão",
+                    "videoURL": "https://www.youtube.com/embed/m5q0mLp-ZjQ?si=vM0ZeL3bg-73nj5W"
+                },
+                {
+                    "nome": "Elevação com Halter",
+                    "videoURL": "https://www.youtube.com/embed/89K5H0Vvhnw?si=RBFMq7G4oUStGlrQ"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "titulo": "Ficha B",
+            "tipo": "Inferior",
+            "alongamento": {
+                "descricao": "Assista ao vídeo abaixo e siga as orientações de alongamento.",
+                "videoURL": "https://www.youtube.com/embed/OpVLju5eVxw?si=_V-wmtgT6yFgl_K2"
+            },
+            "exercicios": [
+                {
+                    "nome": "Agachamento",
+                    "videoURL": "https://www.youtube.com/embed/F4gMwaCRM_c?si=2IooYVs2tijRzoCF"
+                },
+                {
+                    "nome": "Elevação Pélvica",
+                    "videoURL": "https://www.youtube.com/embed/hzSp2bDerCU?si=w4YyxMtELGzg2_UK"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "titulo": "Ficha C",
+            "tipo": "Costas",
+            "alongamento": {
+                "descricao": "Assista ao vídeo abaixo e siga as orientações de alongamento.",
+                "videoURL": "https://www.youtube.com/embed/Bx2BTrQr-jk?si=o8kz2Te0uICGxAlN"
+            },
+            "exercicios": [
+                {
+                    "nome": "Remada com Barra",
+                    "videoURL": "https://www.youtube.com/embed/HpvaOR4H5Hg?si=xJzwoC12hMaT-h_P"
+                },
+                {
+                    "nome": "Barra Fixa",
+                    "videoURL": "https://www.youtube.com/embed/JqeQvFQxIig?si=IwZZ9njVtDqRlWrr"
+                }
+            ]
+        }
+    ]
+}
