@@ -1,0 +1,45 @@
+html,body{
+  background-color: rgb(154, 196, 154);
+}
+.perfis{
+
+  border-radius: 10px;
+  margin-left: 30px;
+  padding:10px;
+
+}
+#teste{
+  background-color: aliceblue;
+  border-radius: 10px;
+  padding: 2px;
+  margin: 5px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.685);
+}
+h3{
+  text-align: start;
+}
+/* Estilos padrão para telas maiores */
+.imagemDaReceita {
+    max-width: 100%; /* A imagem não deve ultrapassar a largura do contêiner pai */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+#corpo {
+    font-size: 16px; /* Tamanho de fonte padrão */
+}
+
+/* Media query para telas menores, como tablets */
+@media (max-width: 768px) {
+    #corpo {
+        font-size: 14px; /* Reduz o tamanho da fonte para telas menores */
+    }
+}
+
+/* Media query para telas ainda menores, como smartphones */
+@media (max-width: 576px) {
+    #corpo {
+        font-size: 12px; /* Reduz ainda mais o tamanho da fonte para telas pequenas */
+    }
+}
+
+/*background-color: rgb(149, 130, 170);*/

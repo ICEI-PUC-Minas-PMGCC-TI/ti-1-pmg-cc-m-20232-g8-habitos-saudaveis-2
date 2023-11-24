@@ -1,0 +1,37 @@
+[
+    {  
+        "id":"1",
+        "nomerec":"Lasanha de Berinjela",
+        "nome": "Pedro",
+        "descricao":"Lasanha de Berinjela ao forno.",
+        "ingredientes":"2 berinjelas grandes, cortadas em fatias finas no sentido do comprimento, 500g de carne moída magra (pode ser carne de frango, peru ou carne magra de boi), 1 cebola, picada, 2 dentes de alho, picados, 1 lata (400g) de tomate pelado, esmagado, 1/2 xícara de molho de tomate, 1 colher de chá de orégano seco,1 colher de chá de manjericão seco,Sal e pimenta a gosto,1 xícara de queijo ricota ou queijo cottage, 1 xícara de queijo muçarela ralado, 1/2 xícara de queijo parmesão ralado, Azeite de oliva para regar."
+    },
+    {   
+        "id":"2",
+        "nomerec":"Filé de Frango Grelhado com Limão e Ervas",
+        "nome": "Júlia",
+        "descricao":"Filé de Frango Grelhado com Limão e Ervas fácil e pratico para o almoço.",
+        "ingredientes":"4 filés de peito de frango, Suco de 1 a 2 limões,2 colheres de sopa de azeite de oliva extra virgem, 2 dentes de alho picados,  1 colher de chá de tomilho seco (ou ervas de sua escolha, como alecrim ou manjericão), Sal e pimenta a gosto."
+    },
+    {   
+        "id":"3",
+        "nomerec":"Panqueca",
+        "nome": "Gustavo",
+        "descricao":"Panquecas Fit de Aveia e Banana.",
+        "ingredientes":"1 banana madura, 2 ovos, 1/2 xícara de aveia em flocos (pode ser aveia sem glúten, se necessário), 1/2 colher de chá de fermento em pó, 1/2 colher de chá de essência de baunilha (opcional), Pitada de canela (opcional), Uma pitada de sal;"
+    },
+    {  
+        "id":"4",
+        "nomerec":"Salada de Frutas",
+        "nome": "Mariana",
+        "descricao":"Salada de frutas para sobremesa.",
+        "ingredientes":"1 xícara de morangos, cortados ao meio;1 banana, cortada em rodelas;1 maçã, cortada em cubos;1 kiwi, descascado e cortado em fatias; 1 colher de sopa de suco de limão (opcional);Mel a gosto (opcional)"
+    },
+    {   
+        "id":"5",
+        "nomerec":"Abobrinha Assada",
+        "nome": "Victor",
+        "descricao":"Abobrinha Assada recheada com patinho e como acompanhamento, batata doce",
+        "ingredientes":"3 abobrinhas médias, 2 colheres de sopa de azeite de oliva extra virgem, 2 dentes de alho picados, 1 colher de chá de tomilho seco, 1 colher de chá de alecrim seco, 1 colher de chá de manjericão seco , Sal e pimenta a gosto , Queijo parmesão ralado (opcional)"
+    }
+]

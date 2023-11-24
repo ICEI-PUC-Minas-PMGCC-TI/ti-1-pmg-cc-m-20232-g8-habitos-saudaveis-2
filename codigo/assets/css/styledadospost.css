@@ -1,0 +1,23 @@
+#imagens{
+    background-color: black;
+    color: white;
+    text-align: center ;
+   padding: top;
+   border-radius: 5px;
+   position: relative;
+   
+
+}
+#nova-img{
+    width: 70px;
+    height: 35px;
+    position: absolute;
+    left: 0;
+}
+
+main{
+    margin-top: 60px;
+    background-color: white;
+    height: 650px;
+    border-radius: 10px;
+}

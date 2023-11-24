@@ -1,0 +1,58 @@
+  {
+    "reviews": [
+      {
+        "name": "Soul Fit- Cozinha Saudável",
+        "address": "Rua Barão de Coromandel, 196 - Alto Caiçaras, Belo Horizonte - MG, 30775-560",
+        "rating": 4.5,
+        "review": "Comida deliciosa e saudável. Adorei o atendimento."
+      },
+      {
+        "name": "Restaurante Bem Natural Savassi",
+        "address": "R. Pte. Nova, 364 - Floresta, Belo Horizonte - MG, 30110-150",
+        "rating": 4.0,
+        "review": "Ótimas opções de café da manhã saudável. Recomendo o smoothie de abacate."
+      },
+      {
+        "name": "FitVegano",
+        "address": "R. Joazeiro, 109 - São Cristóvão, Belo Horizonte - MG, 31110-490",
+        "rating": 4.2,
+        "review": "Variedade incrível de saladas. Ideal para uma refeição leve."
+      },
+      {
+        "name": "Balance Comida Saudável",
+        "address": "R. Lagoa Dourada, 168 - Prado, Belo Horizonte - MG, 30411-150",
+        "rating": 4.7,
+        "review": "Excelente restaurante com opções saudáveis e saborosas. O suco de açaí é incrível."
+      },
+      {
+        "name": "Bio Natural Produtos Naturais",
+        "address": "R. Curvelo, 72 - Floresta, Belo Horizonte - MG, 31015-172",
+        "rating": 4.3,
+        "review": "Pratos veganos deliciosos. Ambiente acolhedor e atendimento amigável."
+      },
+      {
+        "name": "Bhfit Alimentação Saudável",
+        "address": "R. Pte. Nova, 798 - Colégio Batista, Belo Horizonte - MG, 31110-150",
+        "rating": 4.6,
+        "review": "Opções saudáveis e saborosas. Destaque para as saladas e sucos naturais."
+      },
+      {
+        "name": "3f - Fast Fitness Food",
+        "address": "Av. Nossa Sra. de Fátima, 2104 - Lagoinha, Belo Horizonte - MG, 30710-662",
+        "rating": 4.4,
+        "review": "Cardápio variado com pratos leves e nutritivos. Recomendo as wraps."
+      },
+      {
+        "name": "Fafá Fit Comida Saudável",
+        "address": "Carlos Prates, Belo Horizonte - MG, 30710-480",
+        "rating": 4.8,
+        "review": "Comida natural de alta qualidade. Ambiente agradável e serviço rápido."
+      },
+      {
+        "name": "Marília Fit",
+        "address": "R. Marília de Dirceu, 70B - Lourdes, Belo Horizonte - MG, 30170-090",
+        "rating": 4.1,
+        "review": "Grill saudável com opções fitness. Destaque para os grelhados e saladas."
+      }
+    ]
+  }
