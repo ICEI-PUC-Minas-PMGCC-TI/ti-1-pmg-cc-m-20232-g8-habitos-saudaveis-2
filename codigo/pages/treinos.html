@@ -1,95 +1,147 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/codigo/assets/css/styleprogresso.css" />
     <link rel="stylesheet" href="/codigo/assets/css/styletreinos.css" />
     <script src="/codigo/assets/js/treinos.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
     <style>
-        body {
-          background: rgb(95, 159, 203);
-          background: radial-gradient(
-            circle,
-            rgba(95, 159, 203, 1) 50%,
-            rgba(89, 170, 75, 1) 84%);
-        }
+      body {
+        background: rgb(95, 159, 203);
+        background: radial-gradient(
+          circle,
+          rgba(95, 159, 203, 1) 50%,
+          rgba(89, 170, 75, 1) 84%
+        );
+      }
     </style>
 
     <title>Progresso</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">
-                    <img src="/codigo/assets/images/logo_remove_bg_2.png" alt="Logo" />
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="/codigo/assets/images/logo_remove_bg_2.png" alt="Logo" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Categorias
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Categorias
-           </a>
-            <ul class="dropdown-menu">
-              <li>
-              <a class="dropdown-item" href="#">Receitas Saudáveis</a>
-               </li>
-                <li><a class="dropdown-item" href="#">Progresso</a></li>
-                <li><a class="dropdown-item" href="#">Restaurantes</a></li>
-                <li><a class="dropdown-item" href="#">Academias</a></li>
-                <li><a class="dropdown-item" href="#">Rotina</a></li>
-                <li><a class="dropdown-item" href="#">Dicas</a></li>
-               <li><a class="dropdown-item" href="#">Treinos</a></li>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="/codigo/pages/receitas_personalizadas.html"
+                      >Receitas Saudáveis</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/codigo/pages/progresso.html"
+                      >Progresso</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="/codigo/pages/localizacao_resturantes.html"
+                      >Restaurantes</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="/codigo/pages/localizacao_academias.html"
+                      >Academias</a
+                    >
+                  </li>
+                  <li><a class="dropdown-item" href="#">Rotina</a></li>
+                  <li><a class="dropdown-item" href="#">Dicas</a></li>
+                  <li>
+                    <a class="dropdown-item" href="/codigo/pages/treinos.html"
+                      >Treinos</a
+                    >
+                  </li>
+                </ul>
+              </li>
             </ul>
-             </li>
-            </ul>
-                    <div class="menu-right">
-                        <div class="login">
-                            <ul>
-                                <li><a href="#">Login</a></li>
-                                <li><a href="#">Cadastro</a></li>
-                            </ul>
-                        </div>
-                        <div class="icon">
-                            <a href="#">
-                                <ion-icon name="person-circle-outline"></ion-icon>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            <div class="menu-right">
+              <div class="login">
+                <ul>
+                  <li><a href="#">Login</a></li>
+                  <li><a href="#">Cadastro</a></li>
+                </ul>
+              </div>
+              <div class="icon">
+                <a href="#">
+                  <ion-icon name="person-circle-outline"></ion-icon>
+                </a>
+              </div>
             </div>
-        </nav>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <div class="container">
-        <h1 class="titulo">Treino Personalizado: Marco Túlio</h1>
-        <div class="informação">
-            <h3>Objetivo:</h3>
-            <h3>Tipo: Treino para Endomorfo</h3>
-            <h3>Data: 02/10/2023</h3>
-        </div>
+      <h1 class="titulo">Treino Personalizado: Marco Túlio</h1>
+      <div class="informação">
+        <h3>Objetivo:</h3>
+        <h3>Tipo: Treino para Endomorfo</h3>
+        <h3>Data: 02/10/2023</h3>
+      </div>
 
-        <h2>Fichas de Treino</h2>
-      <hr style="width: 80%; margin: 10px auto; border: 3px solid #333;">
+      <h2>Fichas de Treino</h2>
+      <hr style="width: 80%; margin: 10px auto; border: 3px solid #333" />
 
-        <div class="todasfichas" id="fichasTreino">
-            <!--FICHAS-->
-        </div>
+      <div class="todasfichas" id="fichasTreino">
+        <!--FICHAS-->
+      </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>
