@@ -4,34 +4,39 @@
         "nomerec":"Lasanha de Berinjela",
         "nome": "Pedro",
         "descricao":"Lasanha de Berinjela ao forno.",
-        "ingredientes":"2 berinjelas grandes, cortadas em fatias finas no sentido do comprimento, 500g de carne moída magra (pode ser carne de frango, peru ou carne magra de boi), 1 cebola, picada, 2 dentes de alho, picados, 1 lata (400g) de tomate pelado, esmagado, 1/2 xícara de molho de tomate, 1 colher de chá de orégano seco,1 colher de chá de manjericão seco,Sal e pimenta a gosto,1 xícara de queijo ricota ou queijo cottage, 1 xícara de queijo muçarela ralado, 1/2 xícara de queijo parmesão ralado, Azeite de oliva para regar."
+        "ingredientes":"2 berinjelas grandes, cortadas em fatias finas no sentido do comprimento, 500g de carne moída magra (pode ser carne de frango, peru ou carne magra de boi), 1 cebola, picada, 2 dentes de alho, picados, 1 lata (400g) de tomate pelado, esmagado, 1/2 xícara de molho de tomate, 1 colher de chá de orégano seco,1 colher de chá de manjericão seco,Sal e pimenta a gosto,1 xícara de queijo ricota ou queijo cottage, 1 xícara de queijo muçarela ralado, 1/2 xícara de queijo parmesão ralado, Azeite de oliva para regar.",
+        "preparo":"1-Preaqueça o forno a 200°C.  2- Em uma panela, aqueça um pouco de azeite de oliva e refogue a cebola e o alho até ficarem dourados. 3-Adicione a carne moída e cozinhe até que esteja completamente dourada. Tempere com sal, pimenta, orégano e manjericão. 4-Adicione o tomate pelado esmagado e o molho de tomate à panela. Cozinhe por mais alguns minutos, deixando o molho engrossar. Reserve.   5-Enquanto isso, em uma assadeira, grelhe as fatias de berinjela até ficarem macias.  6-Em uma forma para lasanha, monte as camadas da seguinte maneira: comece com uma camada fina de molho de carne, seguida por uma camada de fatias de berinjela, uma camada de queijo ricota ou cottage e uma camada de queijo muçarela. Repita as camadas até que todos os ingredientes sejam usados, terminando com uma camada de queijo muçarela por cima.  7-Polvilhe o queijo parmesão ralado por cima da lasanha.   8-Cubra a forma com papel alumínio e asse no forno preaquecido por 25-30 minutos. Remova o papel alumínio nos últimos 10 minutos para dourar o queijo. 9-Retire do forno e deixe descansar por alguns minutos antes de cortar e servir."
     },
     {   
         "id":"2",
         "nomerec":"Filé de Frango Grelhado com Limão e Ervas",
         "nome": "Júlia",
         "descricao":"Filé de Frango Grelhado com Limão e Ervas fácil e pratico para o almoço.",
-        "ingredientes":"4 filés de peito de frango, Suco de 1 a 2 limões,2 colheres de sopa de azeite de oliva extra virgem, 2 dentes de alho picados,  1 colher de chá de tomilho seco (ou ervas de sua escolha, como alecrim ou manjericão), Sal e pimenta a gosto."
+        "ingredientes":"4 filés de peito de frango, Suco de 1 a 2 limões,2 colheres de sopa de azeite de oliva extra virgem, 2 dentes de alho picados,  1 colher de chá de tomilho seco (ou ervas de sua escolha, como alecrim ou manjericão), Sal e pimenta a gosto.",
+        "preparo":"1- Tempere os filés de frango com sal, pimenta, alho picado e tomilho seco em ambos os lados.    2-Regue os filés com suco de limão e azeite de oliva. Certifique-se de que todos os lados estejam bem cobertos.   3- Deixe marinar por pelo menos 15-20 minutos para permitir que os sabores se misturem.    4-Aqueça uma grelha ou frigideira antiaderente em fogo médio-alto. 5-Grelhe os filés de frango por cerca de 6-8 minutos de cada lado, ou até que estejam cozidos por completo e tenham uma cor dourada.  6- Certifique-se de que o frango atingiu uma temperatura interna segura de 74°C.   7- Retire os filés da grelha e deixe descansar por alguns minutos antes de servir.  8- Sirva os filés de frango grelhados com uma salada fresca ou legumes cozidos para uma refeição saudável e equilibrada."
     },
     {   
         "id":"3",
         "nomerec":"Panqueca",
         "nome": "Gustavo",
         "descricao":"Panquecas Fit de Aveia e Banana.",
-        "ingredientes":"1 banana madura, 2 ovos, 1/2 xícara de aveia em flocos (pode ser aveia sem glúten, se necessário), 1/2 colher de chá de fermento em pó, 1/2 colher de chá de essência de baunilha (opcional), Pitada de canela (opcional), Uma pitada de sal;"
+        "ingredientes":"1 banana madura, 2 ovos, 1/2 xícara de aveia em flocos (pode ser aveia sem glúten, se necessário), 1/2 colher de chá de fermento em pó, 1/2 colher de chá de essência de baunilha (opcional), Pitada de canela (opcional), Uma pitada de sal;",
+        "preparo":"1-Em uma tigela, amasse a banana até obter um purê.   2- Adicione os ovos à banana amassada e misture bem.   3-Acrescente a aveia, o fermento em pó, a essência de baunilha, a canela (se estiver usando) e uma pitada de sal. Misture até obter uma massa homogênea. 4-Deixe a massa descansar por alguns minutos para que a aveia absorva um pouco do líquido.   5-Aqueça uma frigideira antiaderente em fogo médio.  6-Despeje cerca de 1/4 de xícara da massa na frigideira para formar cada panqueca.  7-Cozinhe até que bolhas apareçam na superfície da panqueca e as bordas estejam firmes. Isso geralmente leva de 2 a 3 minutos.   8-Vire a panqueca e cozinhe do outro lado por mais 1-2 minutos, ou até dourar.   9-Repita o processo até que toda a massa seja utilizada.10-Sirva as panquecas com frutas frescas, iogurte natural ou mel, se desejar."
     },
     {  
         "id":"4",
         "nomerec":"Salada de Frutas",
         "nome": "Mariana",
         "descricao":"Salada de frutas para sobremesa.",
-        "ingredientes":"1 xícara de morangos, cortados ao meio;1 banana, cortada em rodelas;1 maçã, cortada em cubos;1 kiwi, descascado e cortado em fatias; 1 colher de sopa de suco de limão (opcional);Mel a gosto (opcional)"
+        "ingredientes":"1 xícara de morangos, cortados ao meio;1 banana, cortada em rodelas;1 maçã, cortada em cubos;1 kiwi, descascado e cortado em fatias; 1 colher de sopa de suco de limão (opcional);Mel a gosto (opcional)",
+        "preparo":"1-Lave e prepare todas as frutas conforme necessário.   2-Em uma tigela, misture os morangos, banana, maçã e kiwi.   3-Se desejar, regue com suco de limão para adicionar um toque de acidez e impedir que as frutas oxidem.   4-Adoce a salada, se necessário, com mel a gosto.   5-Mexa suavemente para garantir que as frutas estejam bem combinadas.  6-Sirva imediatamente ou leve à geladeira por um tempo para esfriar antes de servir."
     },
     {   
         "id":"5",
         "nomerec":"Abobrinha Assada",
         "nome": "Victor",
         "descricao":"Abobrinha Assada recheada com patinho e como acompanhamento, batata doce",
-        "ingredientes":"3 abobrinhas médias, 2 colheres de sopa de azeite de oliva extra virgem, 2 dentes de alho picados, 1 colher de chá de tomilho seco, 1 colher de chá de alecrim seco, 1 colher de chá de manjericão seco , Sal e pimenta a gosto , Queijo parmesão ralado (opcional)"
+        "ingredientes":"3 abobrinhas médias, 2 colheres de sopa de azeite de oliva extra virgem, 2 dentes de alho picados, 1 colher de chá de tomilho seco, 1 colher de chá de alecrim seco, 1 colher de chá de manjericão seco , Sal e pimenta a gosto , Queijo parmesão ralado (opcional)",
+        "preparo":"1- Pré-aqueça o forno a 200°C.  2-Lave bem as abobrinhas e corte-as em rodelas médias.3-Em uma tigela grande, misture as rodelas de abobrinha com o azeite de oliva, alho, tomilho, alecrim, manjericão, sal e pimenta. Certifique-se de que as abobrinhas estejam bem cobertas pela mistura de temperos.   4-Espalhe as rodelas de abobrinha em uma assadeira em uma única camada.  5-Asse no forno pré-aquecido por cerca de 20-25 minutos, ou até que as abobrinhas fiquem macias e douradas nas bordas. Você pode mexer as abobrinhas na metade do tempo de cozimento para garantir que cozinhem uniformemente.  6-Retire do forno e, se desejar, polvilhe queijo parmesão ralado por cima."
     }
 ]
