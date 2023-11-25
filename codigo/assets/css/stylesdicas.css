@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(95, 159, 203);
+  background: radial-gradient(circle, rgba(95, 159, 203, 1) 50%, rgba(89, 170, 75, 1) 84%);
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 50%;
+  margin: 50px auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+label {
+  margin-bottom: 8px;
+}
+
+input,
+textarea {
+  margin-bottom: 16px;
+  padding: 8px;
+}
+
+button {
+  background-color: #0D6EFD;
+  border-color: #0D6EFD;
+  border-radius: 5px;
+  color: white;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.dicas-container {
+  border-top: 1px solid #ccc;
+  margin-top: 20px;
+}
+
+.dica {
+  margin: 10px 0;
+}
+
+nav img {
+  height: 40px;
+}
+
+nav div.login {
+  padding: 25px;
+}
+
+nav div.login ul {
+  list-style-type: none;
+}
+
+nav div.login li {
+  display: inline;
+  margin-left: 20px;
+}
+
+nav div.login a {
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+}
+
+nav div.login a:hover {
+  color: white;
+  background-color: lightgray;
+}
+
+nav div.icon {
+  font-size: 60px;
+}
+
+nav .menu-right {
+  display: flex;
+  align-items: center;
+}
+
+nav .menu-right .login {
+  margin-right: 10px;
+}
+
+nav .menu-right .icon {
+  flex: 1;
+  text-align: right;
+}
+
+h1 {
+  color: #333;
+}
+
+p {
+  color: #666;
+}
+
+h3 {
+  text-align: center;
+}
+
+.chart-container {
+  text-align: center;
+}
+
+.chart-title {
+  margin-bottom: 20px;
+}
+
+#myPieChart {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}

@@ -3,26 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/codigo/assets/css/stylesdicas.css" />
     <link rel="stylesheet" href="/codigo/assets/css/styleprogresso.css" />
-    <link rel="stylesheet" href="/codigo/assets/css/styletreinos.css" />
-    <script src="/codigo/assets/js/treinos.js"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <style>
-      body {
-        background: rgb(95, 159, 203);
-        background: radial-gradient(
-          circle,
-          rgba(95, 159, 203, 1) 50%,
-          rgba(89, 170, 75, 1) 84%
-        );
-      }
-    </style>
-
     <title>Progresso</title>
   </head>
 
@@ -30,9 +18,9 @@
     <header>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">
-            <img src="/codigo/assets/images/logo_remove_bg_2.png" alt="Logo" />
-          </a>
+          <a class="navbar-brand" href="index.html"
+            ><img src="/codigo/assets/images/logo_remove_bg_2.png" alt="Logo"
+          /></a>
           <button
             class="navbar-toggler"
             type="button"
@@ -56,9 +44,8 @@
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
+                  >Categorias</a
                 >
-                  Categorias
-                </a>
                 <ul class="dropdown-menu">
                   <li>
                     <a
@@ -104,9 +91,9 @@
                 </ul>
               </div>
               <div class="icon">
-                <a href="#">
-                  <ion-icon name="person-circle-outline"></ion-icon>
-                </a>
+                <a href="#"
+                  ><ion-icon name="person-circle-outline"></ion-icon
+                ></a>
               </div>
             </div>
           </div>
@@ -115,18 +102,24 @@
     </header>
 
     <div class="container">
-      <h1 class="titulo">Treino Personalizado: Marco Túlio</h1>
-      <div class="informação">
-        <h3>Objetivo:</h3>
-        <h3>Tipo: Treino para Endomorfo</h3>
-        <h3>Data: 02/10/2023</h3>
-      </div>
+      <form id="formDica">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required />
 
-      <h2>Fichas de Treino</h2>
-      <hr style="width: 80%; margin: 10px auto; border: 3px solid #333" />
+        <label for="data">Data:</label>
+        <input type="date" id="data" required />
 
-      <div class="todasfichas" id="fichasTreino">
-        <!--FICHAS-->
+        <label for="tema">Tema da Dica:</label>
+        <input type="text" id="tema" required />
+
+        <label for="descricao">Dica:</label>
+        <textarea id="descricao" rows="4" required></textarea>
+
+        <button type="button" onclick="adicionarDica()">Adicionar Dica</button>
+      </form>
+
+      <div class="dicas-container" id="dicasContainer">
+        <!-- Dicas serão exibidas aqui -->
       </div>
     </div>
 
@@ -143,5 +136,6 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <script src="/codigo/assets/js/dicas.js"></script>
   </body>
 </html>
