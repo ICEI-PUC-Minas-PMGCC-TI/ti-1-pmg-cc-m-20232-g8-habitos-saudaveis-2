@@ -10,7 +10,12 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
- 
+    <link rel="stylesheet" href="/codigo/assets/css/chat.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
     <title>Mea Health - Home</title>
   </head>
   <body>
@@ -34,7 +39,9 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Home</a
+                >
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -48,14 +55,40 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="pages/receitas_personalizadas.html">Receitas Saudáveis</a>
+                    <a
+                      class="dropdown-item"
+                      href="pages/receitas_personalizadas.html"
+                      >Receitas Saudáveis</a
+                    >
                   </li>
-                  <li><a class="dropdown-item" href="pages/progresso.html">Progresso</a></li>
-                  <li><a class="dropdown-item" href="pages/localizacao_resturantes.html">Restaurantes</a></li>
-                  <li><a class="dropdown-item" href="pages/localizacao_academias.html">Academias</a></li>
+                  <li>
+                    <a class="dropdown-item" href="pages/progresso.html"
+                      >Progresso</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="pages/localizacao_resturantes.html"
+                      >Restaurantes</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="pages/localizacao_academias.html"
+                      >Academias</a
+                    >
+                  </li>
                   <li><a class="dropdown-item" href="pages/">Rotina</a></li>
-                  <li><a class="dropdown-item" href="pages/dicas.html">Dicas</a></li>
-                  <li><a class="dropdown-item" href="pages/treinos.html">Treinos</a></li>
+                  <li>
+                    <a class="dropdown-item" href="pages/dicas.html">Dicas</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="pages/treinos.html"
+                      >Treinos</a
+                    >
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -83,92 +116,413 @@
             <div id="carouselExampleFade" class="carousel slide carousel-fade">
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="assets/images/foto1.avif" class="d-block w-100 rounded-2" alt="..." style="height:400px;">
+                  <img
+                    src="assets/images/foto1.avif"
+                    class="d-block w-100 rounded-2"
+                    alt="..."
+                    style="height: 400px"
+                  />
                 </div>
                 <div class="carousel-item">
-                  <img src="assets/images/foto2.avif" class="d-block w-100 rounded-2" alt="..." style="height:400px;">
+                  <img
+                    src="assets/images/foto2.avif"
+                    class="d-block w-100 rounded-2"
+                    alt="..."
+                    style="height: 400px"
+                  />
                 </div>
                 <div class="carousel-item">
-                  <img src="assets/images/foto3.avif" class="d-block w-100 rounded-2" alt="..." style="height:400px;">
+                  <img
+                    src="assets/images/foto3.avif"
+                    class="d-block w-100 rounded-2"
+                    alt="..."
+                    style="height: 400px"
+                  />
                 </div>
                 <div class="carousel-item">
-                  <img src="assets/images/foto10.avif" class="d-block w-100 rounded-2" alt="..." style="height:400px;">
+                  <img
+                    src="assets/images/foto10.avif"
+                    class="d-block w-100 rounded-2"
+                    alt="..."
+                    style="height: 400px"
+                  />
                 </div>
                 <div class="carousel-item">
-                  <img src="assets/images/foto7.avif" class="d-block w-100 rounded-2" alt="..." style="height:400px;">
+                  <img
+                    src="assets/images/foto7.avif"
+                    class="d-block w-100 rounded-2"
+                    alt="..."
+                    style="height: 400px"
+                  />
                 </div>
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleFade"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
                 <span class="visually-hidden">Previous</span>
               </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleFade"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
                 <span class="visually-hidden">Next</span>
               </button>
             </div>
           </div>
-          <div class="col-12 border border-success border-2 rounded-2 p-4">
+          <h2 class="text-center mb-5">Beneficios de uma vida saudável</h2>
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFirstOne"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseFirstOne"
+                >
+                  Energia Sustentada:
+                </button>
+              </h2>
+              <div
+                id="flush-collapseFirstOne"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  A busca por hábitos saudáveis não é apenas sobre mudar a
+                  aparência, mas também sobre garantir uma fonte constante de
+                  energia ao longo do dia. Quando alimentamos nosso corpo com
+                  alimentos nutritivos e nos comprometemos com exercícios
+                  regulares, estamos investindo em nossa energia diária. Esses
+                  hábitos ajudam a evitar os altos e baixos frequentes, mantendo
+                  uma energia equilibrada que impulsiona a produtividade e a
+                  vitalidade. Descubra como escolhas simples podem transformar
+                  não apenas a maneira como nos sentimos, mas também como
+                  realizamos nossas atividades diárias.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFristTwo"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseFristTwo"
+                >
+                  Melhoria da Autoconfiança e Autoestima:
+                </button>
+              </h2>
+              <div
+                id="flush-collapseFristTwo"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Além dos benefícios físicos óbvios, adotar hábitos saudáveis
+                  tem um impacto profundo na maneira como nos vemos e nos
+                  sentimos. À medida que conquistamos nossas metas de saúde e
+                  fitness, começamos a sentir uma transformação não apenas no
+                  corpo, mas também na mente. A confiança cresce à medida que
+                  superamos desafios e cumprimos nossos compromissos com um
+                  estilo de vida mais saudável. A autoestima floresce quando nos
+                  damos conta do poder que temos sobre nossas escolhas e do
+                  impacto positivo que elas têm em nós mesmos.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFristThree"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseFristThree"
+                >
+                  Foco Mental Aprimorado:
+                </button>
+              </h2>
+              <div
+                id="flush-collapseFristThree"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  A mente saudável caminha lado a lado com um corpo saudável. Ao
+                  adotar hábitos que nutrem tanto o corpo quanto a mente,
+                  descobrimos uma capacidade aprimorada de concentração e foco.
+                  A prática regular de exercícios não apenas fortalece o corpo,
+                  mas também estimula a mente, proporcionando clareza mental e
+                  preparando-nos para enfrentar os desafios diários com mais
+                  assertividade. Uma alimentação balanceada complementa esse
+                  processo, fornecendo os nutrientes essenciais para manter a
+                  mente afiada e pronta para os desafios do cotidiano.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 text-center rounded-2">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/g3qjAI4CfQM?si=zPFD2v9bvUurh3yt&start=10"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="col-12 border border-success border-2 rounded-2 p-4 mt-5">
             <h2 class="text-center mb-3"><span>Perguntas Frequentes</span></h2>
             <div class="accordion accordion-flush" id="accordionFlushExample">
               <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                    Accordion Item #1
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseOne"
+                  >
+                    <span>Quem somos?</span>
                   </button>
                 </h2>
-                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                <div
+                  id="flush-collapseOne"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    O Mea Health é uma plataforma dedicada a ajudar indivíduos a
+                    adotar e manter hábitos saudáveis. Nosso objetivo é fornecer
+                    recursos e suporte para aqueles que buscam orientação e
+                    informações sobre como iniciar uma jornada para um estilo de
+                    vida mais saudável.
+                  </div>
                 </div>
               </div>
               <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                    Accordion Item #2
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo"
+                  >
+                    <span>Quais são os objetivos do Mea Health?</span>
                   </button>
                 </h2>
-                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                <div
+                  id="flush-collapseTwo"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    Nossos objetivos centram-se em tornar acessíveis e fáceis os
+                    recursos relacionados à saúde e ao bem-estar. Queremos ser
+                    uma fonte confiável para informações sobre localização de
+                    academias, restaurantes saudáveis, treinos, dicas e receitas
+                    saudáveis, ajudando as pessoas a se sentirem capacitadas
+                    para fazer escolhas saudáveis em suas vidas diárias.
+                  </div>
                 </div>
               </div>
               <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                    Accordion Item #3
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseThree"
+                  >
+                    <span>Preciso pagar para usar a plataforma?</span>
                   </button>
                 </h2>
-                <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                <div
+                  id="flush-collapseThree"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    Não, o Mea Health é totalmente gratuito. Nosso objetivo é
+                    tornar os recursos para um estilo de vida saudável
+                    acessíveis a todos. Todos os nossos serviços, incluindo
+                    localização de academias, restaurantes, treinos, dicas e
+                    receitas, são oferecidos sem custos para os usuários.
+                  </div>
                 </div>
               </div>
               <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-                    Accordion Item #4
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFour"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseFour"
+                  >
+                    <span
+                      >Como o Mea Health pode me ajudar a começar minha jornada
+                      para hábitos saudáveis?</span
+                    >
                   </button>
                 </h2>
-                <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                <div
+                  id="flush-collapseFour"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    O Mea Health foi criado para ser o seu ponto de partida na
+                    busca por um estilo de vida mais saudável. Oferecemos uma
+                    variedade de recursos, desde localização de academias e
+                    restaurantes saudáveis até treinos, dicas e receitas para
+                    facilitar o início dessa jornada. Nossa plataforma é
+                    projetada para ajudar aqueles que buscam orientação e apoio
+                    para começar seus hábitos saudáveis de forma simples e
+                    acessível.
+                  </div>
                 </div>
               </div>
               <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-                    Accordion Item #5
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFive"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseFive"
+                  >
+                    <span
+                      >Que tipo de recursos e informações estão disponíveis na
+                      plataforma?</span
+                    >
                   </button>
                 </h2>
-                <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                <div
+                  id="flush-collapseFive"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    Na plataforma do Mea Health, você encontrará uma gama
+                    diversificada de informações e ferramentas voltadas para o
+                    seu bem-estar. Isso inclui localização de academias e
+                    restaurantes que promovem escolhas saudáveis, treinos
+                    elaborados por especialistas, dicas de saúde, receitas
+                    nutritivas e muito mais. Nosso objetivo é oferecer um
+                    conjunto abrangente de recursos para facilitar sua jornada
+                    em direção a um estilo de vida mais saudável.
+                  </div>
                 </div>
               </div>
               <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
-                    Accordion Item #6
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseSix"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseSix"
+                  >
+                    <span
+                      >Existe suporte ou orientação personalizada disponível na
+                      plataforma?</span
+                    >
                   </button>
                 </h2>
-                <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                <div
+                  id="flush-collapseSix"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    Sim, entendemos que cada pessoa tem necessidades individuais
+                    ao embarcar na jornada para hábitos mais saudáveis. Embora
+                    nossa plataforma seja gratuita, oferecemos suporte de forma
+                    personalizada por meio de fóruns de comunidade, onde você
+                    pode interagir com outros usuários, trocar experiências e
+                    até mesmo receber conselhos de especialistas. Além disso,
+                    temos recursos de orientação e dicas para ajudar a
+                    esclarecer dúvidas específicas e fornecer direcionamento
+                    personalizado sempre que necessário.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="chat-bar-collapsible">
+        <button id="chat-button" type="button" class="collapsible">
+          Fale conosco!
+          <i
+            id="chat-icon"
+            style="color: #fff"
+            class="fa fa-fw fa-comments-o"
+          ></i>
+        </button>
+
+        <div class="content">
+          <div class="full-chat-block">
+            <div class="outer-container">
+              <div class="chat-container">
+                <div id="chatbox">
+                  <h5 id="chat-timestamp"></h5>
+                  <p id="botStarterMessage" class="botText">
+                    <span>Precisa de ajuda?</span>
+                  </p>
+                </div>
+
+                <div class="chat-bar-input-block">
+                  <div id="userInput">
+                    <input
+                      id="textInput"
+                      class="input-box"
+                      type="text"
+                      name="msg"
+                      placeholder="Tap 'Enter' to send a message"
+                    />
+                    <p></p>
+                  </div>
+
+                  <div class="chat-bar-icons">
+                    <i
+                      id="chat-icon"
+                      style="color: #333"
+                      class="fa fa-fw fa-send"
+                      onclick="sendButton()"
+                    ></i>
+                  </div>
+                </div>
+                <div id="chat-bar-bottom">
+                  <p></p>
                 </div>
               </div>
             </div>
@@ -176,6 +530,20 @@
         </div>
       </div>
     </section>
+    <footer>
+      <div class="container-fluid bg-light mt-5">
+        <div class="row">
+          <div class="col-12">
+            <p class="text-center mt-4">
+              © Mea Health 2023 todos os direitos reservados
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/codigo/assets/js/responses.js"></script>
+    <script src="/codigo/assets/js/chat.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
