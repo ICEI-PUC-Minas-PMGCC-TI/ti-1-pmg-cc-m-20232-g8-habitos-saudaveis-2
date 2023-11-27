@@ -4,7 +4,12 @@
 }
 
 body {
-  background: radial-gradient(circle, rgba(95, 159, 203, 1) 50%, rgba(89, 170, 75, 1) 84%);
+  background: rgb(95, 159, 203);
+  background: radial-gradient(
+    circle,
+    rgba(95, 159, 203, 1) 50%,
+    rgba(89, 170, 75, 1) 84%
+  );
   font-family: Arial, sans-serif;
 }
 
@@ -12,37 +17,36 @@ nav img {
   height: 40px;
 }
 
-nav div.login {
-  padding: 25px;
+nav div.login{
+    padding: 25px;
 }
 
-nav div.login ul {
-  list-style-type: none;
+nav div.login ul{
+    list-style-type: none;
 }
 
-nav div.login li {
-  display: inline;
-  margin-left: 20px;
+nav div.login li{
+    display: inline;
+    margin-left: 20px;
+}
+nav div.login a{
+    text-decoration: none;
+    color: black;
+    padding: 5px;
 }
 
-nav div.login a {
-  text-decoration: none;
-  color: black;
-  padding: 5px;
+nav div.login a:hover{
+    color: white;
+    background-color: lightgray;
 }
 
-nav div.login a:hover {
-  color: white;
-  background-color: lightgray;
-}
-
-nav div.icon {
-  font-size: 60px;
+nav div.icon{
+    font-size: 60px;
 }
 
 nav .menu-right {
   display: flex;
-  align-items: center;
+  align-items: center; 
 }
 
 nav .menu-right .login {
@@ -50,25 +54,21 @@ nav .menu-right .login {
 }
 
 nav .menu-right .icon {
-  flex: 1;
-  text-align: right;
+  flex: 1; 
+  text-align: right; 
 }
 
-header {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
 
-nav {
-  border-bottom: 1px solid #ddd;
-}
-
-nav a {
+h1 {
   color: #333;
 }
 
-nav a:hover {
-  color: #008000;
+p {
+  color: #666;
+}
+
+h3{
+  text-align: center;
 }
 
 #search-bar {
@@ -101,6 +101,8 @@ nav a:hover {
 }
 
 #search-button {
+  border: none;
+  height: 32px;
   border-radius: 0 10px 10px 0;
   width: 70px;
   font-weight: bold;
@@ -193,4 +195,8 @@ nav a:hover {
 .maiores-avaliacoes-lista {
   list-style-type: none;
   padding: 0;
+}
+
+.search-button{
+  font-size: 25px;
 }

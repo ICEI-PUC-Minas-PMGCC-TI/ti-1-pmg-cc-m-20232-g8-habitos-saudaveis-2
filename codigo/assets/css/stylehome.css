@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background: rgb(95, 159, 203);
+    background: radial-gradient(
+      circle,
+      rgba(95, 159, 203, 1) 50%,
+      rgba(89, 170, 75, 1) 84%
+    );
+    font-family: Arial, sans-serif;
+  }
+  
+  nav img {
+    height: 40px;
+  }
+  
+  nav div.login{
+      padding: 25px;
+  }
+  
+  nav div.login ul{
+      list-style-type: none;
+  }
+  
+  nav div.login li{
+      display: inline;
+      margin-left: 20px;
+  }
+  nav div.login a{
+      text-decoration: none;
+      color: black;
+      padding: 5px;
+  }
+  
+  nav div.login a:hover{
+      color: white;
+      background-color: lightgray;
+  }
+  
+  nav div.icon{
+      font-size: 60px;
+  }
+  
+  nav .menu-right {
+    display: flex;
+    align-items: center; 
+  }
+  
+  nav .menu-right .login {
+    margin-right: 10px;
+  }
+  
+  nav .menu-right .icon {
+    flex: 1; 
+    text-align: right; 
+  }
+  
+  
+  h1 {
+    color: #333;
+  }
+  
+  p {
+    color: #666;
+  }
+  
+  h3{
+    text-align: center;
+  }
+
+  button{
+    background-color: #0D6EFD;
+    border-color: #0D6EFD;
+    border-radius: 5px;
+    color: white;
+    padding: 6px 12px;
+  }
+
+  .carousel {
+    max-height: 400px; /* Altura máxima do carrossel */
+    overflow: hidden; /* Oculta parte da imagem que exceder o tamanho do carrossel */
+  }
+  
+  /* Estilos para as imagens do carrossel */
+  .carousel-item img {
+    width: 100%; /* Ajusta a largura da imagem */
+    height: auto; /* Altura automática para preservar a proporção */
+    object-fit: cover; /* Mantém a proporção e preenche todo o espaço do contêiner */
+    display: block; /* Garante o comportamento de bloco da imagem */
+    margin: auto; /* Centraliza a imagem horizontalmente */
+  }
