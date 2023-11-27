@@ -2,7 +2,7 @@ let awaitingObjectiveChoice = false;
 
 function getBotResponse(input) {
     if (awaitingObjectiveChoice) {
-        awaitingObjectiveChoice = false; // reset the flag
+        awaitingObjectiveChoice = false;
         if (input == '1') {
             window.open("https://www.tuasaude.com/receitas-para-emagrecer-com-saude/", '_blank');
             return "Redirecionando para receitas para emagrecer...";
@@ -30,7 +30,7 @@ function getBotResponse(input) {
                 window.open("https://www.google.com/maps/search/academias+em+Belo+Horizonte,+MG/@-19.8455481,-43.9779886,14.82z?entry=ttu", "_blank");
             }, 2000); 
             return "Redirecionando para academias em BH...";
-            
+
         case '4':
             setTimeout(() => {
                 window.open("https://www.mahta.bio/blogs/mahta/habitos-saudaveis?psafe_param=1&utm_term=&utm_campaign=Go-Mahta-B2C-PerfomanceMax-Retargeting&utm_source=adwords&utm_medium=ppc&hsa_acc=2244002998&hsa_cam=18568454137&hsa_grp=&hsa_ad=&hsa_src=x&hsa_tgt=&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAjw7c2pBhAZEiwA88pOFw-ddLJeCVDH7xxt9tRv3KNwajMX9hBzQZCFIl0ifMtrmcDF-djVFxoCL3cQAvD_BwE", "_blank");
