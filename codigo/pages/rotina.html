@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rotina de Hábitos Saudáveis</title>
+</head>
+<body>
+    <h1>Adicione um novo hábito à sua rotina</h1>
+
+    <form id="formHabito">
+        <label for="habito">Hábito:</label><br>
+        <input type="text" id="habito" name="habito"><br>
+        <label for="descricao">Descrição:</label><br>
+        <input type="text" id="descricao" name="descricao"><br>
+        <input type="submit" value="Adicionar Hábito">
+    </form>
+
+    <h2>Sua Rotina:</h2>
+    <pre id="rotina"></pre>
+
+    <script>
+        let usuario = {
+            nome: "Nome do Usuário",
+            rotina: []
+        };
+
+        function adicionarHabito(habito, descricao) {
+            usuario.rotina.push({
+                habito: habito,
+                descricao: descricao
+            });
+        }
+
+        document.getElementById('formHabito').addEventListener('submit', function(event) {
+            event.preventDefault();
+            let habito = document.getElementById('habito').value;
+            let descricao = document.getElementById('descricao').value;
+            adicionarHabito(habito, descricao);
+            document.getElementById('rotina').textContent = JSON.stringify(usuario, null, 2);
+        });
+    </script>
+</body>
+</html>
