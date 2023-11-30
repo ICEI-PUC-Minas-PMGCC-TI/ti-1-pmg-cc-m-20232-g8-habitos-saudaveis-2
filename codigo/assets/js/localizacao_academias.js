@@ -1,192 +1,82 @@
-document.addEventListener("DOMContentLoaded", function() {
-  const jsonFile = "/codigo/assets/js/ratingdata.json";
-  let map;
+  document.addEventListener("DOMContentLoaded", function() {
+    mapboxgl.accessToken = 'pk.eyJ1IjoicGhsb3BlczAzMSIsImEiOiJjbHBoaHp4aGowMm9hMmtxc3EwdmRjcjBiIn0.h5Eyj8hMxyQHJ1IvSs-YgA';
+    let userMarker;
 
-  const ZOOM = 17;
+    const map = new mapboxgl.Map({
+      container: 'mapaRestaurantes',
+      style: 'mapbox://styles/mapbox/streets-v11',
+      center: [-43.9298, -19.9208],
+      zoom: 12
+    });
 
-  function geocodeAddress(addressDetails) {
-    let queryString = "";
-    if (addressDetails.city) queryString += `${encodeURIComponent(addressDetails.city)},`;
-    if (addressDetails.neighborhood) queryString += `${encodeURIComponent(addressDetails.neighborhood)},`;
-    if (addressDetails.street) queryString += `${encodeURIComponent(addressDetails.street)},`;
-    if (addressDetails.number) queryString += `${encodeURIComponent(addressDetails.number)},`;
+    function geocodeAddress(addressDetails) {
+      const { city, neighborhood, street, number } = addressDetails;
+      const query = `${number} ${street}, ${neighborhood}, ${city}`;
+      const geocodingApiUrl = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(query)}.json?access_token=${mapboxgl.accessToken}`;
 
-    const geocodingApiUrl = `https://nominatim.openstreetmap.org/search?format=json&q=${queryString}`;
-
-    return fetch(geocodingApiUrl)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then(data => {
-        if (data && data.length > 0) {
-          const firstResult = data[0];
-          const location = {
-            latitude: parseFloat(firstResult.lat),
-            longitude: parseFloat(firstResult.lon),
-            zoom: ZOOM,
-          };
-          return location;
-        } else {
-          throw new Error("Nenhum resultado de geocodificação encontrado para o endereço fornecido.");
-        }
-      });
-  }
-
-  function getUserLocation() {
-    return new Promise((resolve, reject) => {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(
-          (position) => {
-            resolve({
-              latitude: position.coords.latitude,
-              longitude: position.coords.longitude
-            });
-          },
-          (error) => {
-            resolve(null);
-            console.error(`Erro ao obter a localização: ${error.message}`);
+      return fetch(geocodingApiUrl)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`Falha na solicitação de geocodificação: ${response.statusText}`);
           }
-        );
-      } else {
-        console.error("Geolocalização não é suportada neste navegador.");
-        resolve(null);
+          return response.json();
+        })
+        .then(data => {
+          if (data.features && data.features.length > 0) {
+            const coordinates = data.features[0].center;
+            return {
+              longitude: coordinates[0],
+              latitude: coordinates[1]
+            };
+          } else {
+            const fallbackQuery = `${neighborhood}, ${city}`;
+            const fallbackGeocodingApiUrl = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(fallbackQuery)}.json?access_token=${mapboxgl.accessToken}`;
+            return fetch(fallbackGeocodingApiUrl)
+              .then(response => {
+                if (!response.ok) {
+                  throw new Error(`Falha na solicitação de geocodificação genérica: ${response.statusText}`);
+                }
+                return response.json();
+              })
+              .then(fallbackData => {
+                if (fallbackData.features && fallbackData.features.length > 0) {
+                  const fallbackCoordinates = fallbackData.features[0].center;
+                  return {
+                    longitude: fallbackCoordinates[0],
+                    latitude: fallbackCoordinates[1]
+                  };
+                } else {
+                  throw new Error("Nenhum resultado de geocodificação encontrado para o endereço fornecido.");
+                }
+              });
+          }
+        })
+        .catch(error => {
+          throw new Error(`Erro ao geocodificar o endereço: ${error.message}`);
+        });
+    }
+
+    function addCurrentUserLocationMarker(lngLat) {
+      if (userMarker) {
+        userMarker.remove();
       }
-    });
-  }
 
-  function addReviewsToPage(reviews) {
-    const reviewsByNeighborhood = {};
+      const markerElement = document.createElement('div');
+      markerElement.className = 'user-marker';
 
-    reviews.forEach(review => {
-      const address = review.Adress;
-      const addressParts = address.split(', ');
+      userMarker = new mapboxgl.Marker(markerElement)
+        .setLngLat(lngLat)
+        .addTo(map);
+    }
 
-      if (addressParts.length >= 3) {
-        const neighborhood = addressParts[2];
+    const btnBusca = document.getElementById("btnBusca");
+    btnBusca.addEventListener("click", function() {
+      const cityInput = document.getElementById("cityInput").value;
+      const neighborhoodInput = document.getElementById("neighborhoodInput").value;
+      const streetInput = document.getElementById("streetInput").value;
+      const numberInput = document.getElementById("numberInput").value;
 
-        if (!reviewsByNeighborhood[neighborhood]) {
-          reviewsByNeighborhood[neighborhood] = [];
-        }
-        reviewsByNeighborhood[neighborhood].push(review);
-      }
-    });
-
-    const ratingList = document.getElementById("rating-list");
-    const sortedNeighborhoods = Object.keys(reviewsByNeighborhood).sort();
-    sortedNeighborhoods.forEach(neighborhood => {
-      const reviewsForNeighborhood = reviewsByNeighborhood[neighborhood];
-      reviewsForNeighborhood.sort((a, b) => b.Rating - a.Rating);
-
-      reviewsForNeighborhood.forEach(review => {
-        const listItem = document.createElement("li");
-        listItem.innerHTML = `
-            <strong>Nome:</strong> ${review.Name}<br>
-            <strong>Endereço:</strong> ${review.Adress}<br>
-            <strong>Avaliação:</strong> ${review.Rating}<br><br>
-          `;
-        ratingList.appendChild(listItem);
-      });
-    });
-  }
-
-
-  function addLocationsToMap(locations) {
-    const iconStyle = new ol.style.Style({
-      image: new ol.style.Icon({
-        anchor: [0.5, 1],
-        src: 'https://i.ibb.co/MGMczYq/vecteezy-map-pointer-icon-gps-location-symbol-maps-pin-location-16314852-814.png',
-        scale: 0.1,
-      }),
-    });
-
-    const markerFeatures = locations.map(location => {
-      const { latitude, longitude, nome } = location;
-
-      return new ol.Feature({
-        geometry: new ol.geom.Point(ol.proj.fromLonLat([longitude, latitude])),
-        name: nome
-      });
-    });
-
-    markerFeatures.forEach(feature => {
-      feature.setStyle(iconStyle);
-      feature.on('click', function(evt) {
-        const clickedFeature = evt.target;
-        const clickedFeatureName = clickedFeature.get('name');
-
-        const selectedLocation = locations.find(location => location.nome === clickedFeatureName);
-        if (selectedLocation) {
-          const content = createPopupContent(selectedLocation);
-          const popup = new ol.Overlay({
-            element: document.getElementById('popup'),
-            positioning: 'bottom-center',
-            offset: [0, -10],
-          });
-          map.addOverlay(popup);
-          popup.setPosition(evt.coordinate);
-          document.getElementById('popup-content').innerHTML = content;
-        }
-      });
-    });
-
-    const markerSource = new ol.source.Vector({
-      features: markerFeatures
-    });
-
-    const markerLayer = new ol.layer.Vector({
-      source: markerSource
-    });
-
-    map.addLayer(markerLayer);
-  }
-
-  getUserLocation()
-    .then(userLocation => {
-      if (userLocation) {
-        const userLatitude = userLocation.latitude;
-        const userLongitude = userLocation.longitude;
-
-        return fetch(jsonFile)
-          .then(response => {
-            if (!response.ok) {
-              throw new Error(`HTTP error! Status: ${response.status}`);
-            }
-            return response.json();
-          })
-          .then(data => {
-            const avaliacoes = data.avaliacoes;
-            addReviewsToPage(avaliacoes);
-
-            const locations = data.locais;
-            const mapaContainer = document.getElementById("mapaRestaurantes");
-
-            map = new ol.Map({
-              target: mapaContainer,
-              layers: [
-                new ol.layer.Tile({
-                  source: new ol.source.OSM(),
-                }),
-              ],
-              view: new ol.View({
-                center: ol.proj.fromLonLat([userLongitude, userLatitude]),
-                zoom: ZOOM,
-              }),
-            });
-
-            addLocationsToMap(locations);
-          })
-          .catch(error => {
-            console.error("Houve um problema ao buscar os dados:", error);
-          });
-      } else {
-        const cityInput = document.getElementById("cityInput").value;
-        const neighborhoodInput = document.getElementById("neighborhoodInput").value;
-        const streetInput = document.getElementById("streetInput").value;
-        const numberInput = document.getElementById("numberInput").value;
-
+      if (cityInput && neighborhoodInput && streetInput && numberInput) {
         const addressDetails = {
           city: cityInput,
           neighborhood: neighborhoodInput,
@@ -196,39 +86,117 @@ document.addEventListener("DOMContentLoaded", function() {
 
         geocodeAddress(addressDetails)
           .then(location => {
-            map.getView().setCenter(ol.proj.fromLonLat([location.longitude, location.latitude]));
-            map.getView().setZoom(location.zoom);
+            map.flyTo({
+              center: [location.longitude, location.latitude],
+              zoom: 15
+            });
+
+            addCurrentUserLocationMarker([location.longitude, location.latitude]);
           })
           .catch(error => {
             console.error("Erro ao geocodificar o endereço:", error);
           });
+      } else {
+        alert("Por favor, preencha todos os campos de pesquisa.");
       }
-    })
-    .catch(error => {
-      console.error("Erro ao obter a localização do usuário:", error);
     });
 
-  const btnBusca = document.getElementById("btnBusca");
-  btnBusca.addEventListener("click", function() {
-    const cityInput = document.getElementById("cityInput").value;
-    const neighborhoodInput = document.getElementById("neighborhoodInput").value;
-    const streetInput = document.getElementById("streetInput").value;
-    const numberInput = document.getElementById("numberInput").value;
+    function showReviews(reviews) {
+      const sortedReviews = reviews.slice().sort((a, b) => b.Rating - a.Rating);
 
-    const addressDetails = {
-      city: cityInput,
-      neighborhood: neighborhoodInput,
-      street: streetInput,
-      number: numberInput,
-    };
+      const ratingList = document.getElementById("rating-list");
+      ratingList.innerHTML = ""; // Limpa a lista antes de adicionar novos itens
 
-    geocodeAddress(addressDetails)
-      .then(location => {
-        map.getView().setCenter(ol.proj.fromLonLat([location.longitude, location.latitude]));
-        map.getView().setZoom(location.zoom);
-      })
-      .catch(error => {
-        console.error("Erro ao geocodificar o endereço:", error);
+      sortedReviews.forEach(review => {
+        const listItem = document.createElement("li");
+        listItem.innerHTML = `
+          <strong>Nome:</strong> ${review.Name}<br>
+          <strong>Endereço:</strong> ${review.Adress}<br>
+          <strong>Avaliação:</strong> ${review.Rating}<br><br>
+        `;
+        ratingList.appendChild(listItem);
       });
+    }
+
+    function addLocationsToMap(locations, reviews) {
+      locations.forEach(location => {
+        const { nome, latitude, longitude } = location;
+    
+        // Encontrar a avaliação correspondente à academia
+        const academia = reviews.find(avaliacao => avaliacao.Name === nome);
+        
+        // Verifica se a academia foi encontrada e se possui o campo de endereço
+        const endereco = academia && academia.Adress ? academia.Adress : 'Endereço não disponível';
+    
+        const marker = new mapboxgl.Marker({
+          color: "#FF0000"
+        })
+          .setLngLat([longitude, latitude])
+          .setPopup(new mapboxgl.Popup().setHTML(`
+            <h4><strong>${nome}</strong></h4>
+            <strong>Endereço:</strong> ${endereco}<br>
+            <strong>Avaliação:</strong> ${academia ? academia.Rating : 'Sem avaliação'}<br>
+          `))
+          .addTo(map);
+    
+        // Adiciona um evento de clique ao marcador para exibir os detalhes
+        marker.getElement().addEventListener('click', () => {
+          // Se desejar, aqui você pode implementar a lógica para exibir informações detalhadas
+          // com base na marcação clicada
+          console.log(`Informações detalhadas para: ${nome}`);
+          console.log(`Endereço: ${endereco}`);
+          console.log(`Avaliação: ${academia ? academia.Rating : 'Sem avaliação'}`);
+        });
+      });
+    }
+    
+
+    function fetchReviews() {
+      return fetch('/codigo/assets/js/ratingData.json')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+          return response.json();
+        })
+        .catch(error => {
+          console.error("Erro ao buscar os dados:", error);
+        });
+    }
+
+    fetchReviews().then(data => {
+      const avaliacoes = data.avaliacoes;
+      const locais = data.locais;
+
+      showReviews(avaliacoes);
+      addLocationsToMap(locais, avaliacoes);
+    });
+
+    function organizeReviewsByNeighborhood(reviews) {
+      const reviewsByNeighborhood = {};
+
+      reviews.forEach(review => {
+        const neighborhood = review.Neighborhood;
+        if (!reviewsByNeighborhood[neighborhood]) {
+          reviewsByNeighborhood[neighborhood] = [];
+        }
+        reviewsByNeighborhood[neighborhood].push(review);
+      });
+
+      for (const neighborhood in reviewsByNeighborhood) {
+        reviewsByNeighborhood[neighborhood].sort((a, b) => b.Rating - a.Rating);
+      }
+
+      return reviewsByNeighborhood;
+    }
+
+    const reviews = [
+      { Name: "Restaurante A", Neighborhood: "Bairro X", Rating: 4 },
+      { Name: "Restaurante B", Neighborhood: "Bairro Y", Rating: 3 },
+      // Mais avaliações...
+    ];
+
+    const reviewsByNeighborhood = organizeReviewsByNeighborhood(reviews);
+    console.log(reviewsByNeighborhood);
+
   });
-});
