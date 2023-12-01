@@ -50,3 +50,10 @@ h3{
   height: 100px; 
   padding: 5px;
 }
+
+.perfis .receita-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333; 
+  margin-bottom: 10px; 
+}
