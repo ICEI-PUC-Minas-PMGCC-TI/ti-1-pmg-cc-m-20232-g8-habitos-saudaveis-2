@@ -3,29 +3,33 @@ function adicionarDadosAoGrafico(updateToDatabase) {
     let date = document.getElementById("date").value;
     let weight = parseFloat(document.getElementById("currentWeight").value);
     let bodyfat = parseFloat(document.getElementById("bodyfat").value);
-    let id = 1;
 
     if (isNaN(weight) || isNaN(bodyfat) || weight <= 0 || bodyfat <= 0) {
         alert("Por favor, insira valores válidos para peso e percentual de gordura!");
         return;
     }
 
-
     let chart = Chart.getChart("progressChart");
-
 
     chart.data.labels.push(date);
     chart.data.datasets[0].data.push(weight);
     chart.data.datasets[1].data.push(bodyfat);
 
-    chart.update()
-    updateToDatabase({
-      date: date,
-      weight: weight,
-      bodyfat: bodyfat,
-      height: height,
-      userid: 1,
-    })
+    chart.update();
+
+    const usuarioCorrenteJSON = sessionStorage.getItem('usuarioCorrente');
+    if (usuarioCorrenteJSON) {
+        const usuarioCorrente = JSON.parse(usuarioCorrenteJSON);
+        updateToDatabase({
+            date: date,
+            weight: weight,
+            bodyfat: bodyfat,
+            height: height,
+            userid: usuarioCorrente.id,
+        });
+    } else {
+        console.log('Nenhum usuário está logado');
+    }
 
     /*document.getElementById("data").value = "";
     document.getElementById("currentWeight").value = "";
@@ -87,4 +91,12 @@ function pushImc(imc){
     chart2.update();
 
     document.getElementById("resultadoIMC").innerHTML = "Classificação do IMC: " + imc;
+}
+
+const usuarioCorrenteJSON = sessionStorage.getItem('usuarioCorrente');
+if (usuarioCorrenteJSON) {
+    const usuarioCorrente = JSON.parse(usuarioCorrenteJSON);
+    console.log('ID do usuário logado:', usuarioCorrente.id);
+} else {
+    console.log('Nenhum usuário está logado');
 }

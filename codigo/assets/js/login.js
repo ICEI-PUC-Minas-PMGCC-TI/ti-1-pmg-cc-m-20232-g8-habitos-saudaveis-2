@@ -27,12 +27,16 @@ function generateUUID() {
 // Dados de usuários para serem utilizados como carga inicial
 const dadosIniciais = {
     usuarios: [
-        { "id": generateUUID(), "login": "admin", "senha": "123", "nome": "Administrador do Sistema", "email": "admin@abc.com" },
-        { "id": generateUUID(), "login": "user", "senha": "123", "nome": "Usuario Comum", "email": "user@abc.com" },
-        { "id": generateUUID(), "login": "novologin", "senha": "senha123", "nome": "Novo Usuário", "email": "novo@abc.com" },
-        { "id": generateUUID(), "login": "outrologin", "senha": "outrasenha", "nome": "Outro Usuário", "email": "outro@abc.com" }
+        { "id": 1, "login": "admin", "senha": "123", "nome": "Administrador do Sistema", "email": "admin@abc.com" },
+        { "id": 2, "login": "user", "senha": "123", "nome": "Usuario Comum", "email": "user@abc.com" },
     ]
-};
+};;
+
+var ultimoId = dadosIniciais.usuarios.length;
+
+function getNextId() {
+    return ++ultimoId;
+}
 
 function initLoginApp() {
     usuarioCorrenteJSON = sessionStorage.getItem('usuarioCorrente');
@@ -80,7 +84,7 @@ function addUser(nome, login, senha, email) {
         return;
     }
 
-    let newId = generateUUID();
+    let newId = getNextId();
     let usuario = { "id": newId, "login": login, "senha": senha, "nome": nome, "email": email };
 
     db_usuarios.usuarios.push(usuario);
@@ -88,7 +92,12 @@ function addUser(nome, login, senha, email) {
 
     console.log('Banco de dados de usuários atualizado:', db_usuarios);
 }
-
 function setUserPass() {}
 
 initLoginApp();
+
+for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i);
+    const value = localStorage.getItem(key);
+    console.log(`Chave: ${key}, Valor: ${value}`);
+}
