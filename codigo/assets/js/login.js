@@ -35,7 +35,19 @@ const dadosIniciais = {
 var ultimoId = dadosIniciais.usuarios.length;
 
 function getNextId() {
-    return ++ultimoId;
+    let ultimoId = 0;
+    const usuariosJSON = localStorage.getItem('db_usuarios');
+
+    if (usuariosJSON) {
+        const db_usuarios = JSON.parse(usuariosJSON);
+        const usuarios = db_usuarios.usuarios;
+
+        if (usuarios.length > 0) {
+            ultimoId = Math.max(...usuarios.map(user => user.id));
+        }
+    }
+
+    return ultimoId + 1;
 }
 
 function initLoginApp() {
