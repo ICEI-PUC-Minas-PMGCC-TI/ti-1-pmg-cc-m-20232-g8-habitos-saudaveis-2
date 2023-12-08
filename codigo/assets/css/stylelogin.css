@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background: rgb(95, 159, 203);
+    background: radial-gradient(
+      circle,
+      rgba(95, 159, 203, 1) 50%,
+      rgba(89, 170, 75, 1) 84%
+    );
+    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif;
+    display: flex; /* Usa flexbox para centralizar o conteúdo */
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Usa a altura total da janela para centralizar verticalmente */
+  }
+  
+  nav {
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px 0; /* Adiciona padding para aumentar o tamanho do nav */
+    text-align: center; /* Centraliza a imagem */
+  }
+
+  nav img {
+    height: 60px; /* Aumenta o tamanho da imagem */
+  }
+
+  /* Adicione estilos adicionais conforme necessário para o restante do seu conteúdo */
+  .content {
+    margin-top: 100px; /* Para compensar a altura do nav */
+    padding: 20px;
+  }
+
+  #login-column {
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3); /* Adiciona uma sombra suave */
+  }
+  
+  h3 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label.text-info {
+    color: #333;
+  }
+  
+  input.form-control {
+    border-radius: 5px;
+    padding: 6px 12px;
+  }
+  
+  input.btn.btn-info.btn-md {
+    background-color: #0D6EFD;
+    border-color: #0D6EFD;
+    border-radius: 5px;
+    color: white;
+    padding: 6px 12px;
+  }
+  
+  button.btn.btn-info {
+    background-color: #0D6EFD;
+    border-color: #0D6EFD;
+    border-radius: 5px;
+    color: white;
+    padding: 6px 12px;
+  }
+
+  input.btn.btn-info.btn-md:hover { 
+    background-color: lightgray;
+    color: white;
+  }
+  
+  button.btn.btn-info:hover {
+    background-color: lightgray;
+    color: white;
+  }
