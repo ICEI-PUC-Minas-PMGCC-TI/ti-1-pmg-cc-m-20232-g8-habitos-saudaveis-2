@@ -5,47 +5,18 @@
 
 body {
   background: rgb(95, 159, 203);
-  background: radial-gradient(circle, rgba(95, 159, 203, 1) 50%, rgba(89, 170, 75, 1) 84%);
+  background: radial-gradient(
+    circle,
+    rgba(95, 159, 203, 1) 50%,
+    rgba(89, 170, 75, 1) 84%
+  );
   font-family: Arial, sans-serif;
+  line-height: 1.0; /* Reduzindo o espaço entre as linhas */
 }
 
-.container {
-  width: 50%;
-  margin: 50px auto;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-}
-
-label {
-  margin-bottom: 8px;
-}
-
-input,
-textarea {
-  margin-bottom: 16px;
-  padding: 8px;
-}
-
-button {
-  background-color: #0D6EFD;
-  border-color: #0D6EFD;
-  border-radius: 5px;
-  color: white;
-  padding: 6px 12px;
-  cursor: pointer;
-}
-
-.dicas-container {
-  border-top: 1px solid #ccc;
-  margin-top: 20px;
-}
-
-.dica {
-  margin: 10px 0;
+header {
+  text-align: center; /* Centraliza o cabeçalho */
+  margin-bottom: 20px; /* Adicionando um espaço abaixo do cabeçalho */
 }
 
 nav img {
@@ -96,14 +67,23 @@ nav .menu-right .icon {
 
 h1 {
   color: #333;
+  text-align: center; /* Centraliza o cabeçalho */
+  margin-bottom: 20px; /* Adiciona espaço abaixo do cabeçalho */
 }
 
 p {
   color: #666;
+  text-align: center; /* Centraliza os parágrafos */
 }
 
 h3 {
   text-align: center;
+  margin-bottom: 20px; /* Adiciona espaço abaixo dos subtítulos */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px; /* Adiciona espaço abaixo dos subtítulos */
 }
 
 .chart-container {
@@ -114,9 +94,23 @@ h3 {
   margin-bottom: 20px;
 }
 
+button {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  border-radius: 5px;
+  color: white;
+  padding: 2px 25px;
+}
+
 #myPieChart {
   width: 100%;
   height: auto;
   max-width: 100%;
   max-height: 100%;
+}
+
+#tipForm, #comments {
+  width: 60%; /* Defina a largura desejada para os elementos */
+  margin: 0 auto; /* Margens automáticas para centralizar horizontalmente */
+  text-align: center; /* Centraliza o conteúdo dos formulários e comentários */
 }

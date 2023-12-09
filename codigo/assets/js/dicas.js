@@ -1,61 +1,89 @@
-function adicionarDica() {
-  var nome = document.getElementById('nome').value;
-  var data = document.getElementById('data').value;
-  var tema = document.getElementById('tema').value;
-  var descricao = document.getElementById('descricao').value;
-
-  if (nome && data && tema && descricao) {
-    // Criar objeto para representar a nova dica
-    var novaDica = {
-      nome: nome,
-      data: data,
-      tema: tema,
-      descricao: descricao
+function saveTip() {
+    const name = document.getElementById('name').value;
+    const date = document.getElementById('date').value;
+    const subject = document.getElementById('subject').value;
+    const tip = document.getElementById('tip').value;
+  
+    const tipData = {
+      name: name,
+      date: date,
+      subject: subject,
+      tip: tip
     };
-
-    // Verificar se já existem dicas no armazenamento local
-    var dicasSalvas = localStorage.getItem('dicas');
-    var dicasArray = [];
-
-    if (dicasSalvas) {
-      // Se existir, converter as dicas para um array
-      dicasArray = JSON.parse(dicasSalvas);
-    }
-
-    // Adicionar a nova dica ao array
-    dicasArray.push(novaDica);
-
-    // Salvar o array atualizado de dicas de volta no armazenamento local
-    localStorage.setItem('dicas', JSON.stringify(dicasArray));
-
-    // Atualizar a exibição das dicas na página
-    exibirDicas();
-
-    // Limpar o formulário
-    document.getElementById('formDica').reset();
-  } else {
-    alert('Por favor, preencha todos os campos.');
+  
+    const tips = JSON.parse(localStorage.getItem('tips')) || [];
+    tips.push(tipData);
+    localStorage.setItem('tips', JSON.stringify(tips));
+  
+    displayTip(tipData);
   }
-}
-
-function exibirDicas() {
-  var dicasContainer = document.getElementById('dicasContainer');
-  dicasContainer.innerHTML = ''; // Limpar o conteúdo antes de exibir novamente
-
-  var dicasSalvas = localStorage.getItem('dicas');
-  if (dicasSalvas) {
-    var dicasArray = JSON.parse(dicasSalvas);
-    dicasArray.forEach(function(dica) {
-      var novaDica = document.createElement('div');
-      novaDica.classList.add('dica');
-      novaDica.innerHTML = '<strong>Nome:</strong> ' + dica.nome +
-                           '<br><strong>Data:</strong> ' + dica.data +
-                           '<br><strong>Tema:</strong> ' + dica.tema +
-                           '<br><strong>Dica:</strong> ' + dica.descricao;
-      dicasContainer.appendChild(novaDica);
+  
+  function displayTip(tipData) {
+    const tipSection = document.getElementById('tipSection');
+    const tipDiv = document.createElement('div');
+    const tipContent = document.createElement('p');
+  
+    tipContent.innerHTML = `<strong>${tipData.name} (${tipData.date}): ${tipData.subject}</strong><br>${tipData.tip}`;
+    tipDiv.appendChild(tipContent);
+    tipSection.appendChild(tipDiv);
+  }
+  
+  function loadTips() {
+    const tips = JSON.parse(localStorage.getItem('tips')) || [];
+    const tipSection = document.getElementById('tipSection');
+    tipSection.innerHTML = '';
+  
+    tips.forEach(tip => {
+      displayTip(tip);
     });
   }
-}
-
-// Chamada inicial para exibir as dicas salvas ao carregar a página
-exibirDicas();
+  
+  function postComment() {
+    const commentName = document.getElementById('commentName').value;
+    const commentText = document.getElementById('commentText').value;
+  
+    const comment = { name: commentName, comment: commentText };
+    saveComment(comment);
+    displayComment(comment);
+  }
+  
+  function saveComment(comment) {
+    const comments = JSON.parse(localStorage.getItem('comments')) || [];
+    comments.push(comment);
+    localStorage.setItem('comments', JSON.stringify(comments));
+  }
+  
+  function displayComment(comment) {
+    const commentSection = document.getElementById('commentSection');
+    const commentDiv = document.createElement('div');
+    const commentContent = document.createElement('p');
+  
+    commentContent.innerHTML = `<strong>${comment.name}:</strong> ${comment.comment}`;
+    commentDiv.appendChild(commentContent);
+    commentSection.appendChild(commentDiv);
+  }
+  
+  function loadComments() {
+    const comments = JSON.parse(localStorage.getItem('comments')) || [];
+    const commentSection = document.getElementById('commentSection');
+    commentSection.innerHTML = '';
+  
+    comments.forEach(comment => {
+      displayComment(comment);
+    });
+  }
+  
+  document.getElementById('tipForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    saveTip();
+    this.reset();
+  });
+  
+  document.getElementById('commentForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    postComment();
+    this.reset();
+  });
+  
+  loadTips();
+  loadComments();
