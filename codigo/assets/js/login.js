@@ -1,13 +1,13 @@
-// Página inicial de Login
+
 const LOGIN_URL = "login.html";
 
-// Objeto para o banco de dados de usuários baseado em JSON
+
 var db_usuarios = {};
 
-// Objeto para o usuário corrente
+
 var usuarioCorrente = {};
 
-// função para gerar códigos randômicos a serem utilizados como código de usuário
+
 function generateUUID() {
     var d = new Date().getTime();
     var d2 = (performance && performance.now && (performance.now() * 1000)) || 0;
@@ -24,7 +24,7 @@ function generateUUID() {
     });
 }
 
-// Dados de usuários para serem utilizados como carga inicial
+
 const dadosIniciais = {
     usuarios: [
         { "id": 1, "login": "admin", "senha": "123", "nome": "Administrador do Sistema", "email": "admin@abc.com" },
