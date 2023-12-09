@@ -1,4 +1,4 @@
-const apiUrl = 'https://jsonserver-2.paulo-henriq161.repl.co'; 
+const apiUrl = 'https://jsonserver-2-1.paulo-henriq161.repl.co'; 
 
 function displayMessage(mensagem) {
     msg = document.getElementById('msg');
