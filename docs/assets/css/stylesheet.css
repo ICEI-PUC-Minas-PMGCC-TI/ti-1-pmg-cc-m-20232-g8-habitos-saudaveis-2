@@ -2963,3 +2963,18 @@ input:-internal-autofill-selected {
   padding: 5px;
   margin: 0 5px;
 }
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Proporção 16:9 para vídeos do YouTube */
+  margin: auto;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
